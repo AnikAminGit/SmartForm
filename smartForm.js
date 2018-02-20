@@ -39,24 +39,28 @@ $(function(){
 	
 	
 	$("#btn_html").click(function(){
+	
 		
-   $('input[name="likesHTML"]:checked').each(function() {
-       htmlAnswer.push($(this).val());	
-    });
+  
 		
 	$("#q2").hide();	
 	$("#q2a").show();
 	
 		
-	console.log(htmlAnswer);
-		htmlAnswer.forEach(function(value,index){
-		console.log(value,index);	
-		});	
+	
 	
 	htmlchecked=true;
 	
 	$("#btn_snext").click(function(){
 		
+        
+         $('input[name="likesHTML"]:checked').each(function() {
+	  
+       htmlAnswer.push($(this).val());	
+    });
+        
+   
+        
 		$("#q2a").hide();
 		$("#q2").show();
 		if(htmlchecked == true && csschecked == true && jschecked == true ){
@@ -80,10 +84,7 @@ $(function(){
 	$("#btn_css").click(function(){
 		
 			
-$('input[name="likesCSS"]:checked').each(function() {
-       cssAnswer.push($(this).val());	
-    });
-		
+
 	$("#q2").hide();	
 	$("#q2b").show();
 		
@@ -91,9 +92,19 @@ $('input[name="likesCSS"]:checked').each(function() {
 	csschecked=true;
 	
 	$("#btn_pnext").click(function(){
+        
+        $('input[name="likesCSS"]:checked').each(function() {
+       cssAnswer.push($(this).val());	
+    });
+		
+        
 		$("#q2b").hide();
 		$("#q2").show();
 		
+        
+        
+        
+        
 		if(htmlchecked == true && csschecked == true && jschecked == true ){
 			$("#q3").show();
 			$("#q2").hide();
@@ -110,10 +121,7 @@ $('input[name="likesCSS"]:checked').each(function() {
 	
 	
 	$("#btn_js").click(function(){
-	$('input[name="likesJS"]:checked').each(function() {
-       jsAnswer.push($(this).val());	
-    });			
-		
+	
 	$("#q2").hide();	
 	$("#q2c").show();
 		
@@ -121,6 +129,12 @@ $('input[name="likesCSS"]:checked').each(function() {
 	jschecked=true;	
 	
 	$("#btn_jnext").click(function(){
+        
+        $('input[name="likesJS"]:checked').each(function() {
+       jsAnswer.push($(this).val());	
+    });			
+		
+        
 		$("#q2c").hide();
 		$("#q2").show();
 		if(htmlchecked == true && csschecked == true && jschecked == true ){
